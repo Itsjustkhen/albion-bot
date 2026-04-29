@@ -1,3 +1,4 @@
+import os
 import discord
 from discord.ext import commands
 from discord import app_commands
@@ -10,7 +11,7 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 DB = "parties.db"
 
 # ==== END LOGS CHANNEL HERE ====
-LOG_CHANNEL_ID = 1498931630155370596
+LOG_CHANNEL_ID = 1498946116480143370
 # ==============================
 
 EMOJIS = {
@@ -314,5 +315,5 @@ async def on_ready():
     await bot.tree.sync()
     print("Bot ready")
 
-import os
+
 bot.run(os.getenv("TOKEN"))
